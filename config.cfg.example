@@ -1,0 +1,10 @@
+# Core Configuration
+
+# Captive Portal Parameters
+CAPTIVE_GATEWAY="http://<GATEWAY_IP>/login"
+CAPTIVE_USER="username"
+CAPTIVE_PASS="password"
+
+# WireGuard Routing Parameters
+WG_INTERFACE="wg0"
+WG_PEER_IP="<INTERNAL_IP>"
