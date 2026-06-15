@@ -1,0 +1,16 @@
+/proc/*
+/sys/*
+/dev/*
+/run/*
+/tmp/*
+/var/tmp/*
+/lost+found
+/media/*
+/mnt/*
+/srv/*
+/var/cache/*
+/var/lib/docker/*
+/var/lib/lxd/containers/*
+/var/lib/lxd/storage-pools/*
+/home/xpadmin/.cache/*
+/var/backups/ssd/*
