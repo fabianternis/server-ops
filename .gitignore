@@ -1,0 +1,7 @@
+# Security
+config.cfg
+*.key
+*.pem
+
+# Execution artifacts
+*.log
