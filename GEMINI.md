@@ -5,7 +5,9 @@ Welcome, Agent. This system is a headless Ubuntu Server mini-PC configured for a
 ## System Architecture
 
 1. **Automation Repository:** All operational scripts, network helpers, and configurations are located in the [server-ops](file:///opt/server-ops) repository.
-2. **Backups:** The system has a daily versioned backup cron job configured using `rsync --link-dest` at `/opt/server-ops/system/backup-ssd.sh`. Snapshots are stored under `/var/backups/ssd`.
+2. **Backups:**
+   * **System Backup:** A daily versioned backup cron job configured using `rsync --link-dest` at `/opt/server-ops/system/backup-ssd.sh`. Snapshots are stored under `/var/backups/ssd`.
+   * **Configuration Versioning (etckeeper):** The `/etc` directory is managed as a local Git repository via `etckeeper`. Changes to configuration files (including those made during package installs/upgrades) are tracked and committed automatically.
 3. **Captive Portal:** The node checks outbound internet health every 5 minutes using `captive-login.sh` and automatically signs in using credentials located in `config.cfg`.
 4. **WireGuard VPN:** The WireGuard link stability is checked every 2 minutes by `wg-keepalive.sh`. If the VPN peer goes down while the host's general internet remains active, the script restarts the `wg-quick@wg0` service.
 
