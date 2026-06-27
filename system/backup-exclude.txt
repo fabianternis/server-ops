@@ -14,3 +14,9 @@
 /var/lib/lxd/storage-pools/*
 /home/xpadmin/.cache/*
 /var/backups/ssd/*
+/swap.img
+/var/lib/containerd/*
+/home/xpadmin/ai_system_agent/model/*
+**/venv/*
+**/.venv/*
+**/node_modules/*
